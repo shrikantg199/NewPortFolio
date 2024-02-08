@@ -51,7 +51,7 @@ const NavBar = () => {
       </ul>
       <li className="list-none">
         <a href="">
-          <button className="px-3 py-2 text-xl bg-blue-600 rounded-lg">
+          <button className="px-3 py-2 text-md bg-blue-600 rounded-lg">
             Resume
           </button>
         </a>
@@ -67,7 +67,7 @@ const NavBar = () => {
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 py-6 text-4xl capitalize cursor-pointer hover:scale-105"
+              className="px-4 py-6 text-2xl capitalize cursor-pointer hover:scale-105"
             >
               <Link
                 onClick={() => setNav(!nav)}
