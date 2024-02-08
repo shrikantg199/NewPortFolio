@@ -20,7 +20,7 @@ const NavBar = () => {
     },
     {
       id: 4,
-      link: "experience",
+      link: "Skills",
     },
     {
       id: 5,
@@ -29,18 +29,19 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="fixed flex items-center justify-between w-full h-20 px-4 text-white bg-black">
       <div>
-        <h1 className="text-5xl font-signature ml-2 hover:scale-105 hover:text-orange-500 duration-200 cursor-pointer">
-          Shri
-        </h1>
+        <Link to="home" smooth duration={500}>
+          <h1 className="ml-2 text-5xl duration-200 cursor-pointer font-signature hover:scale-105 hover:text-orange-500">
+            Shri
+          </h1>
+        </Link>
       </div>
-
-      <ul className="hidden md:flex">
+      <ul className="hidden gap-6 text-2xl md:flex">
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 hover:text-orange-500 duration-200"
+            className="px-4 font-medium text-white capitalize duration-200 cursor-pointer hover:scale-105 hover:text-orange-500"
           >
             <Link to={link} smooth duration={500}>
               {link}
@@ -48,20 +49,25 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
-
+      <li className="list-none">
+        <a href="">
+          <button className="px-3 py-2 text-xl bg-blue-600 rounded-lg">
+            Resume
+          </button>
+        </a>
+      </li>{" "}
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+        className="z-10 pr-4 text-gray-500 cursor-pointer md:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
-
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-screen text-white bg-gradient-to-b from-black to-gray-800 ">
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              className="px-4 py-6 text-4xl capitalize cursor-pointer hover:scale-105"
             >
               <Link
                 onClick={() => setNav(!nav)}
