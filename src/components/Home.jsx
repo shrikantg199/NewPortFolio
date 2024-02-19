@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { LuInstagram } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
+import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
@@ -11,14 +12,28 @@ const Home = () => {
       name="home"
       className="w-full h-full bg-gradient-to-b from-black via-black to-gray-800"
     >
-      <div className="flex flex-col items-center justify-center h-full max-w-screen-lg px-4 mx-auto md:flex-row ">
-        <div className="flex flex-col justify-center h-full mr-2 mt-60">
-          <h2 className="text-xl font-medium text-white sm:text-7xl">
-            I'm a Full Stack Web Developer.
+      <div className="flex flex-col items-center justify-center h-full max-w-screen-lg px-4 mx-auto gap-20 md:flex-row p-3 ">
+        <div className="flex flex-col justify-center h-full mr-2 mt-28 lg:mt-60">
+          <h2 className="lg:text-6xl text-4xl text-white p-2 font-medium">
+            I'm a
           </h2>
+          <h2 className="text-xl font-medium sm:text-5xl lg:w-[600px] text-cyan-600">
+            {"<"}
+            <ReactTyped
+              strings={["Full Stack Developer."]}
+              typeSpeed={100}
+              loop
+              backSpeed={20}
+              cursorChar="/>"
+              showCursor={true}
+            />
+          </h2>
+
           <p className="max-w-md py-4 text-gray-500 text-xl">
-            I love to work on web application using technologies like React,
-            Tailwind, ExpressJS and MongoDB.
+            Full-stack developer passionate about building web apps with React,
+            Tailwind, ExpressJS, and MongoDB.
+            <br /> Skilled at crafting intuitive UIs and robust backends.
+            Thrives on finding creative solutions to real-world problems.
           </p>
 
           <div>
@@ -59,7 +74,7 @@ const Home = () => {
           <img
             src={HeroImage}
             alt="my profile"
-            className="w-[70%] mx-auto blob rounded-2xl md:w-full "
+            className="w-[70%]  h-[400px] mx-auto blob rounded-2xl md:w-full "
           />
         </div>
       </div>
