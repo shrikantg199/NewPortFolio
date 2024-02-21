@@ -21,7 +21,7 @@ const Portfolio = () => {
     {
       id: 3,
       src: CryptoHub,
-      demo: "#",
+      demo: "https://crypto-hub-psi.vercel.app/",
       code: "https://github.com/shrikantg199/CryptoHub.git",
     },
     {
