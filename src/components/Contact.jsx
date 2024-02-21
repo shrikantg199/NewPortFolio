@@ -36,11 +36,11 @@ const Contact = () => {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col w-full ">
+            <div className="flex flex-col w-full  ">
               {variants.map((variant) => (
                 <div
                   key={variant}
-                  className="flex flex-wrap w-full gap-4 mb-6 md:flex-nowrap md:mb-0"
+                  className="flex  flex-wrap w-full gap-4 mb-6 md:flex-nowrap md:mb-0"
                 >
                   <Input
                     type="email"
