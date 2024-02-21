@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
@@ -50,9 +50,9 @@ const NavBar = () => {
         ))}
       </ul>
       <li className="list-none">
-        <a href="">
+        <a href="https://drive.google.com/file/d/1Sfx9JJrbXzSLwxEVZMrhSTAHY4ptlvBk/view?usp=drive_link">
           <button className="px-3 py-2 text-md bg-blue-600 rounded-lg">
-            Resume
+            Hire Me
           </button>
         </a>
       </li>{" "}
