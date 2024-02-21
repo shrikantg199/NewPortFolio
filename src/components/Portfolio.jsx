@@ -1,10 +1,9 @@
 import FoodApp from "../assets/portfolio/foodApp.png";
-
-import navbar from "../assets/portfolio/navbar.jpg";
 import QuizApp from "../assets/portfolio/QuizApp.png";
-import reactParallax from "../assets/portfolio/reactParallax.jpg";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
-
+import CryptoHub from "../assets/portfolio/CryptoHub.png";
+import { FaGithub } from "react-icons/fa";
+import { FaRocket } from "react-icons/fa";
+import YoutubeClone from "../assets/portfolio/youtubeClone.png";
 const Portfolio = () => {
   const portfolios = [
     {
@@ -15,27 +14,21 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      src: reactParallax,
+      src: YoutubeClone,
       demo: "#",
-      code: "#",
+      code: "https://github.com/shrikantg199/Youtube_clone.git",
     },
     {
       id: 3,
-      src: navbar,
+      src: CryptoHub,
       demo: "#",
-      code: "#",
+      code: "https://github.com/shrikantg199/CryptoHub.git",
     },
     {
       id: 4,
       src: QuizApp,
       demo: "https://quiz-app-red-eta.vercel.app/",
       code: "https://github.com/shrikantg199/QuizApp.git",
-    },
-    {
-      id: 5,
-      src: reactSmooth,
-      demo: "",
-      code: "#",
     },
   ];
 
@@ -52,23 +45,34 @@ const Portfolio = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 ">
           {portfolios.map(({ id, src, demo, code }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
-              />
+            <div
+              key={id}
+              className="shadow-md shadow-gray-700 rounded-lg hover:scale-110 transition-all"
+            >
+              <img src={src} alt="" className="rounded-md duration-200 " />
               <div className="flex items-center justify-center">
                 <button
                   href={id.demo}
                   className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
                 >
-                  <a href={demo}> Demo</a>
+                  <a href={demo}>
+                    <div className="flex gap-2">
+                      <FaRocket />
+                      Demo
+                    </div>{" "}
+                  </a>
                 </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
-                  <a href={code}> code</a>
+                <button className="w-1/2  px-6 py-3 m-4 duration-200 hover:scale-105">
+                  <a href={code}>
+                    {" "}
+                    <div className="flex gap-2">
+                      {" "}
+                      <FaGithub className="text-2xl bg-transparent" />
+                      GitHub
+                    </div>
+                  </a>
                 </button>
               </div>
             </div>
