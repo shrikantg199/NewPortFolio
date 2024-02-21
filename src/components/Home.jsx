@@ -14,10 +14,13 @@ const Home = () => {
     >
       <div className="flex flex-col items-center justify-center h-full max-w-screen-lg px-4 mx-auto gap-20 md:flex-row p-3 ">
         <div className="flex flex-col justify-center h-full mr-2 mt-28 lg:mt-60">
-          <h2 className="lg:text-6xl text-4xl text-white p-2 font-medium">
-            I'm a
+          <h2 className="lg:text-6xl text-4xl  text-white p-2 font-medium">
+            I'm ,
           </h2>
-          <h2 className="text-xl font-medium sm:text-5xl lg:w-[600px] text-cyan-600">
+          <h2 className="lg:text-6xl text-4xl  text-white p-2 font-medium">
+            Shrikant Gaikwad
+          </h2>
+          <h2 className="text-xl transition-all font-medium sm:text-5xl lg:w-[600px] text-cyan-600">
             {"<"}
             <ReactTyped
               strings={["Full Stack Developer."]}
