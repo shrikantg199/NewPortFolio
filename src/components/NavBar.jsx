@@ -50,7 +50,7 @@ const NavBar = () => {
         ))}
       </ul>
       <li className="list-none">
-        <a href="https://drive.google.com/file/d/1Sfx9JJrbXzSLwxEVZMrhSTAHY4ptlvBk/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/1TXvNTmL_6I7wi9cE1fJQVVeSC7nQ19sx/view?usp=sharing">
           <button className="px-3 py-2 text-md bg-blue-600 rounded-lg">
             Hire Me
           </button>
