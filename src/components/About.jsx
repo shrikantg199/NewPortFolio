@@ -35,10 +35,14 @@ const About = () => {
           <span className="text-orange-500"> cryptocurrency web app</span> , and{" "}
           <span className="text-orange-500"> a food ordering application</span>.
           Demonstrated strong technical skills in frontend, backend and database
-          development. Looking to leverage solid engineering foundation and
-          full-stack skills to join a dynamic technology team as a web
-          developer.
+          development.
         </p>
+
+        <p className="text-2xl">
+          Looking to leverage solid engineering foundation and full-stack skills
+          to join a dynamic technology team as a web developer.
+        </p>
+        <br />
       </div>
     </div>
   );
