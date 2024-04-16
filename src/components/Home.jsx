@@ -5,7 +5,11 @@ import { LuInstagram } from "react-icons/lu";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
-
+import { motion } from "framer-motion";
+const textVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0 },
+};
 const Home = () => {
   return (
     <div
@@ -14,13 +18,31 @@ const Home = () => {
     >
       <div className="flex flex-col items-center justify-center h-full max-w-screen-lg px-4 mx-auto gap-20 md:flex-row p-3 ">
         <div className="flex flex-col justify-center h-full mr-2 mt-28 lg:mt-60">
-          <h2 className="lg:text-6xl text-4xl  text-white p-2 font-medium">
+          <motion.h2
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 0.6 }}
+            className="lg:text-6xl text-4xl  text-white p-2 font-medium"
+          >
             I'm ,
-          </h2>
-          <h2 className="lg:text-6xl text-4xl  text-white p-2 font-medium">
+          </motion.h2>
+          <motion.h2
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 0.8 }}
+            className="lg:text-6xl text-4xl  text-white p-2 font-medium"
+          >
             Shrikant Gaikwad
-          </h2>
-          <h2 className="text-xl transition-all font-medium sm:text-5xl lg:w-[600px] text-cyan-600">
+          </motion.h2>
+          <motion.h2
+            className="text-xl transition-all font-medium sm:text-5xl lg:w-[600px] text-cyan-600"
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 1}}
+          >
             {"<"}
             <ReactTyped
               strings={["Full Stack Developer."]}
@@ -30,16 +52,27 @@ const Home = () => {
               cursorChar="/>"
               showCursor={true}
             />
-          </h2>
+          </motion.h2>
 
-          <p className="max-w-md py-4 text-gray-500 text-xl">
+          <motion.p
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 1.2 }}
+            className="max-w-md py-4 text-gray-500 text-xl"
+          >
             Full-stack developer passionate about building web apps with React,
             Tailwind, ExpressJS, and MongoDB.
             <br /> Skilled at crafting intuitive UIs and robust backends.
             Thrives on finding creative solutions to real-world problems.
-          </p>
+          </motion.p>
 
-          <div>
+          <motion.div
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 1.4 }}
+          >
             <Link
               to="portfolio"
               smooth
@@ -70,16 +103,20 @@ const Home = () => {
                 </li>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div>
+        <motion.div
+          initial={{ x: 100 }}
+          animate={{ x: -10 }}
+          transition={{ duration: 1 }}
+        >
           <img
             src={HeroImage}
             alt="my profile"
             className="w-[70%]  h-[400px] mx-auto blob rounded-2xl md:w-full "
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
