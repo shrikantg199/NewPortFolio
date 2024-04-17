@@ -17,7 +17,7 @@ const Home = () => {
       className="w-full h-full bg-gradient-to-b from-black via-black to-gray-800"
     >
       <div className="flex flex-col items-center justify-center h-full max-w-screen-lg px-4 mx-auto gap-20 md:flex-row p-3 ">
-        <div className="flex flex-col justify-center h-full mr-2 mt-28 lg:mt-28">
+        <div className="flex flex-col justify-center h-full mr-2 mt-28 lg:mt-44">
           <motion.h2
             variants={textVariants}
             initial="hidden"
