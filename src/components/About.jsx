@@ -17,72 +17,74 @@ const About = () => {
   return (
     <div
       name="about"
-      className="w-full h-screen text-white bg-gradient-to-b from-gray-800 to-black"
+      className="w-full h-auto text-white bg-gradient-to-b from-gray-800 to-black"
     >
-      <div className="flex flex-col justify-center w-full h-full max-w-screen-lg p-4 mx-auto mb-8">
-        <div className="pb-18 mt-48 lg:mt-2 ">
+      <div className="flex flex-col justify-center w-full h-full max-w-screen-lg p-4 mx-auto ">
+        <div className="pb-18 mb-4  mt-20 lg:mt-20 ">
           <p className="inline text-4xl font-bold border-b-4 border-gray-500">
             About
           </p>
         </div>
-        <motion.p
-          className="mt-10 text-2xl"
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, delay: 0.8 }}
-          style={{ opacity: textAnimation }}
-        >
-          My Name is <span className="text-orange-500">Shrikant Gaikwad</span>.
-          I did Bachelor of Engineering degree with expertise in Full-stack
-          development. I have hands-on experience{" "}
-          <span className="text-orange-500">
-            building responsive applications using JavaScript, React, Node.js
-            and MongoDB.
-          </span>
-        </motion.p>
-        <br />
-        <motion.p
-          className="text-2xl"
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, delay: 1 }}
-          style={{ opacity: textAnimation }}
-        >
-          I have demonstrated strong technical skills including frontend
-          development with React, backend development with Node.js and Express,
-          and database management with MongoDB.
-        </motion.p>
-        <br />
-        <motion.p
-          className="text-2xl pb-8"
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, delay: 1.2 }}
-          style={{ opacity: textAnimation }}
-        >
-          Key projects include a <span className="text-orange-500">
-            YouTube clone
-          </span>
-          , a simple <span className="text-orange-500">cryptocurrency web app</span>, and{" "}
-          <span className="text-orange-500">a food ordering application</span>.
-          Demonstrated strong technical skills in frontend, backend and database
-          development.
-        </motion.p>
-        <motion.p
-          className="text-2xl"
-          variants={textVariants}
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 1, delay: 1.4 }}
-          style={{ opacity: textAnimation }}
-        >
-          Looking to leverage solid engineering foundation and full-stack skills
-          to join a dynamic technology team as a web developer.
-        </motion.p>
-        <br />
+        <div className="md:flex md:flex-row flex-col  justify-between items-center ">
+          <motion.div
+            className=""
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 1, delay: 1 }}
+            style={{ opacity: textAnimation }}
+          >
+            <img
+              className="rounded-2xl"
+              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWk3M2Fzc3R3bG1tNWo4dG96azJzcmc0aTh4Z2R4ZGZkNnprdDN4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1R1tvI9svkIWwpVYr/giphy.gif"
+              alt=""
+            />
+          </motion.div>
+          <div className="md:w-[50%] w-full my-4 md:my-1 md:mx-4">
+            <motion.p
+              className=" text-md"
+              variants={textVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1, delay: 0.8 }}
+              style={{ opacity: textAnimation }}
+            >
+              My Name is{" "}
+              <span className="text-orange-500">Shrikant Gaikwad</span>. As a
+              full-stack developer, I specialize in crafting diverse projects,
+              including a LeetCode clone, an ecommerce platform, and a dynamic
+              blog website.
+            </motion.p>
+            <br />
+            <motion.p
+              className="text-md"
+              variants={textVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1, delay: 1 }}
+              style={{ opacity: textAnimation }}
+            >
+              Leveraging my expertise in both backend and frontend development,
+              I meticulously build robust solutions that seamlessly integrate
+              complex functionalities like algorithmic problem-solving, user
+              authentication, and engaging UI/UX design.
+            </motion.p>
+            <br />
+
+            <motion.p
+              className="text-md"
+              variants={textVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 1, delay: 1.2 }}
+              style={{ opacity: textAnimation }}
+            >
+              {" "}
+              Looking to leverage solid engineering foundation and full-stack
+              skills to join a dynamic technology team as a web developer.
+            </motion.p>
+          </div>
+        </div>
       </div>
     </div>
   );

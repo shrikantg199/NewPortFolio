@@ -17,7 +17,7 @@ const Home = () => {
       className="w-full h-full bg-gradient-to-b from-black via-black to-gray-800"
     >
       <div className="flex flex-col items-center justify-center h-full max-w-screen-lg px-4 mx-auto gap-20 md:flex-row p-3 ">
-        <div className="flex flex-col justify-center h-full mr-2 mt-28 lg:mt-60">
+        <div className="flex flex-col justify-center h-full mr-2 mt-28 lg:mt-28">
           <motion.h2
             variants={textVariants}
             initial="hidden"
@@ -41,7 +41,7 @@ const Home = () => {
             variants={textVariants}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 1, delay: 1}}
+            transition={{ duration: 1, delay: 1 }}
           >
             {"<"}
             <ReactTyped
@@ -59,7 +59,7 @@ const Home = () => {
             initial="hidden"
             animate="visible"
             transition={{ duration: 1, delay: 1.2 }}
-            className="max-w-md py-4 text-gray-500 text-xl"
+            className="max-w-md py-4 text-gray-500 text-md"
           >
             Full-stack developer passionate about building web apps with React,
             Tailwind, ExpressJS, and MongoDB.
