@@ -37,7 +37,7 @@ const NavBar = () => {
           </h1>
         </Link>
       </div>
-      <ul className="hidden gap-6 text-2xl md:flex">
+      <ul className="hidden gap-6 text-2xl md:flex transition-all">
         {links.map(({ id, link }) => (
           <li
             key={id}
@@ -63,13 +63,14 @@ const NavBar = () => {
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
       {nav && (
-        <ul className="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-screen text-white bg-gradient-to-b from-black  to-gray-800 ">
+        <ul className="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-screen text-white bg-gradient-to-b from-black  to-gray-800 transition-all">
           {links.map(({ id, link }) => (
             <li
               key={id}
               className="px-4 py-6 text-2xl capitalize cursor-pointer hover:scale-105"
             >
               <Link
+                className=""
                 onClick={() => setNav(!nav)}
                 to={link}
                 smooth

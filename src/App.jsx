@@ -1,21 +1,20 @@
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Skills from "./components/Skiils";
-import Home from "./components/Home";
-import NavBar from "./components/NavBar";
-import Portfolio from "./components/Portfolio";
+import { useState, useEffect } from "react";
+import Main from "./components/Main";
+import Loader from "./components/Loader";
 
 function App() {
-  return (
-    <div>
-      <NavBar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Skills />
-      <Contact />
-    </div>
-  );
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    // Clean up
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return <div className="">{loading ? <Loader /> : <Main />}</div>;
 }
 
 export default App;

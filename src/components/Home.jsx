@@ -6,11 +6,11 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
-const textVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0 },
-};
 const Home = () => {
+  const textVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
     <div
       name="home"

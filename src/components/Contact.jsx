@@ -46,7 +46,7 @@ const Contact = () => {
                     type="email"
                     variant={variant}
                     label="Email"
-                    className="border-white"
+                    className="border-white "
                   />
                 </div>
               ))}
