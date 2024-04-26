@@ -1,4 +1,3 @@
-
 import About from "./About";
 import Contact from "./Contact";
 import Skills from "./Skills";
@@ -10,7 +9,7 @@ const Main = () => {
   const { scrollYProgress } = useScroll();
   console.log("scrollYProgress:", scrollYProgress);
   return (
-    <div>
+    <div className="container-with-scrollbar ">
       <motion.div
         className="progress-bar bg-orange-500 z-50"
         style={{ scaleX: scrollYProgress }}
